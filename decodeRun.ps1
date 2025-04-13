@@ -8,3 +8,5 @@ $decodedText = [System.Text.Encoding]::UTF8.GetString($bytes)
 #Write-Host $decodedText
 
 Set-Content -Path "decoded.ps1" -Value $decodedText
+
+.\decoded.ps1
