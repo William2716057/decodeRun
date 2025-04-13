@@ -1,4 +1,8 @@
-Add-Type -AssemblyName "System.Windows.Forms"
 
-# Display Message
-[System.Windows.Forms.MessageBox]::Show('Error!', 'Message Box Title')
+$base64Content = Get-Content -Path "base64.txt" -Raw
+
+$bytes = [System.Convert]::FromBase64String($base64Content)
+
+$decodedText = [System.Text.Encoding]::UTF8.GetString($bytes)
+
+Write-Host $decodedText
